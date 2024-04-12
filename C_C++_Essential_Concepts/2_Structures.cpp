@@ -13,6 +13,17 @@ struct Rectangle {
     int breadth = 0;
 }r, s; // We can write multiple variable names here so we dont have to declare it separately
 
+struct Card {
+    int face;
+    int shape;
+    int color;
+};
+
+// We can declare it outside the main function as well
+// struct Rectangle r; // struct Rectangle has now been declared and is consuming memory
+// struct rectangle s;
+// struct rectangle t;
+
 int main()
 {
     // struct Rectangle r; // struct Rectangle has now been declared and is consuming memory
@@ -49,6 +60,17 @@ int main()
 
     cout<< "Name: " << t.name << endl;
     cout<< "Area: " << t.length * t.breadth << endl;
+
+    cout<< "-------" << endl;
+
+    // Cards Struct
+    // Array of structures
+    struct Card deck[4] = {{1, 0, 0}, {2, 0, 0}, {1, 1, 0}, {2, 1, 0}};
+
+    for(int i =0; i < sizeof(deck)/sizeof(deck[0]); i++) {
+        cout<< "Card no. " << i + 1 << endl;
+        cout<< "Face: " << deck[i].face << endl << "\nShape: " << deck[i].shape << "\nColor: " << deck[i].color << endl << endl;
+    }
 
     return 0;
 }
