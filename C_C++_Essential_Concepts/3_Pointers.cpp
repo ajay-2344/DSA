@@ -23,7 +23,7 @@ int main()
     int *p;
 
     // Initialize pointer
-    p = &a; // This `p` pointer is in stack memory and is pointing to a // Address of a is stored
+    p = &a; // This `p` pointer is in stack memory and is pointing to `a` // Address of `a` is stored
 
     // Displaying result
     cout<< "a: " << a << endl; // Direct access
@@ -52,10 +52,10 @@ int main()
     int *a_p;
 
     // Storing address of the array 
-    a_p = arr; // We dont have to use `&` symbol to get the address because arr variable already contains the address of first element of the array
+    a_p = arr; // We dont have to use `&` symbol to get the address because `arr` variable already contains the address of first element of the array
     /* We can add any number in `a_p` to store the address of another element but the number should be in the array's range 
         Eg: a_p = arr + 1; 
-        This will store the address of seconds element of the array 
+        This will store the address of second element of the array 
     */
 
     /* Other way to store address of `arr` array
@@ -91,8 +91,8 @@ int main()
     }
 
     // Releasing heap memory (C Style) to avoid Memory Leak
-    free(h_p);
-    free(n);
+    // free(h_p);
+    // free(n);
 
     // Releasing heap memory (C++ Style) to avoid Memory Leak
     delete []h_p;

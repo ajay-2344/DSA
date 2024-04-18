@@ -1,5 +1,5 @@
 // Struct is a `User-Defined data type`
-// Collection of data members under one name is structure
+// Collection of data members under one name is structure (Grouping data)
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -26,9 +26,9 @@ struct Card {
 
 int main()
 {
-    // struct Rectangle r; // struct Rectangle has now been declared and is consuming memory
-    // struct rectangle s;
-    // struct rectangle t;
+    // struct Rectangle r; // `struct Rectangle` has now been declared and is consuming memory
+    // Rectangle s; // In C++ writing `struct` is not mandatory to declare a structure.
+    // struct Rectangle t;
 
     // Initialization using Initializer List
     // struct Rectangle r = {"Kiku", 15, 10};
