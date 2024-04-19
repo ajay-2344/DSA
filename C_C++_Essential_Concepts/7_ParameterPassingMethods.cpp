@@ -12,9 +12,9 @@ void swap_call_by_value(int a, int b) {
     b = temp;
 
     // Swap without using a 3rd variable
-    b = a + b;
-    a = b - a;
-    b = b - a;
+    // b = a + b;
+    // a = b - a;
+    // b = b - a;
 }
 
 // Call by address
