@@ -1,14 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+// Part 1
 struct Rectangle {
     int length;
     int breadth;
-};
-
-struct TestArray {
-    int arr[5];
-    int n;
 };
 
 // Call by value
@@ -33,6 +30,12 @@ int transfer2(struct Rectangle *r3) {
 }
 
 
+// Part 2
+struct TestArray {
+    int arr[5];
+    int n;
+};
+
 // Testing Array in structure: Call by value
 void testArrayFunc(struct TestArray b, int size) {
 
@@ -48,14 +51,38 @@ void testArrayFunc(struct TestArray b, int size) {
 
 }
 
+
+// Part 3
+// Allocating memory for structure in heap
+struct Rectangle * allocateHeap(int size) {
+
+    struct Rectangle *h_p;
+
+    // C++ Style memory allocation
+    h_p = new struct Rectangle[size];
+
+    // C Style memory allocation
+    // h_p = (struct Rectangle *)malloc(sizeof(size));
+
+    // Assigning some values to the data members of structure which lies in heap memory
+    h_p -> length = 45;
+    h_p -> breadth = 35;
+
+    return h_p;
+}
+
+
 int main()
 {
+    // ------------------------------------------------------------Part 1-----------------------------------------------------------------------------
+    cout<< "--------" << endl;
+
     struct Rectangle r = {10, 5};
 
     cout<< transfer2(&r) << endl; // 1200
     cout<< r.length << " " << r.breadth << endl; // 30 30
 
-    // 
+    // -------------------------------------------------------------Part 2----------------------------------------------------------------------------
     cout<< "--------" << endl;
     
     
@@ -76,5 +103,26 @@ int main()
         cout<< a.arr[i] << " "; // [1, 2, 3, 4, 5] // Not changed. Clearly a copy of the structure is created even if it contains array in it.
     }
     
+    cout << endl;
+
+    // --------------------------------------------------------------Part 3---------------------------------------------------------------------------
+    cout<< "--------" << endl;
+
+
+    // Allocating memory in heap
+    struct Rectangle *p; // Declaring pointer to structure
+
+    size = sizeof(struct Rectangle); // Getting the size of `struct Rectangle`
+
+    // Getting the address of the allocated memory in heap
+    p = allocateHeap(size);
+
+    // Displaying output
+    cout<< (p -> length * p -> breadth);
+
+
+    // Freeing allocated memory because I am a mature responsible programmer
+    delete []p;
+
     return 0;
 }
