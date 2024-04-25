@@ -40,9 +40,8 @@ int main()
     // Creating object `r` of class `Rectangle`
     Rectangle r(10, 5); // Constructor Rectangle is automatically executed. Here we are initializing values of length and breadth
 
-    cout<< r.area() << endl;
-    r.changeLength(20);
-    cout<< r.area() << endl;
-
+    cout<< r.area() << endl; // 50
+    r.changeLength(20); 
+    cout<< r.area() << endl; // 100
     return 0;
 }
