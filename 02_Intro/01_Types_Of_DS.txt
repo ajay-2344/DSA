@@ -1,0 +1,16 @@
+Types of Data Structure: Physical and Logical Data Structure
+
+Physical DS is meant for actually storing data and Logical DS is used to decide how data will be stored and accessed.
+
+Physical:
+
+    Array - Used when we know the size and want to use Stack memory
+    Linked List- Used when the size is dynamic and want to use Heap memory
+
+Logical:
+
+    Stack (Linear) - LIFO
+    Queue (Linear) - FIFO
+    Trees (Non-Linear) - 
+    Graph (Non-Linear) - 
+    Hash Table (Tabular) - 
